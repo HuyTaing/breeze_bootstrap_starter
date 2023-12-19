@@ -21,6 +21,20 @@
           </li>
         </ul>
       @endguest
+      @auth
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <form  role="button" action="{{ route('logout') }}"
+              method="POST">
+              @csrf
+              <button class="btn btn-primary" type="submit">
+                Déconnexion
+              </button>
+            </form>
+          </li>
+        </ul>
+
+      @endauth
     </div>
   </div>
 </nav>
